@@ -13,7 +13,7 @@ Welcome to the Food Trucks Locator project! This application is designed to help
 - Food trucks without latitude and longitude are excluded as they cannot be localized.
 - Example usage:
   ```bash
-  python3 manage.py load_food_trucks /path/to/food-truck-data.csv
+  python manage.py load_food_trucks /path/to/food-truck-data.csv
   ```
 
 ### Working Hours Data
@@ -45,11 +45,11 @@ Welcome to the Food Trucks Locator project! This application is designed to help
 - Django management command for terminal-based food truck queries.
 - **Usage Example**:
   ```bash
-  python3 manage.py list_food_trucks "37.7749" "-122.4194" --time "2023-09-15T10:30" --timezone "America/Los_Angeles"
+  python manage.py list_food_trucks "37.7749" "-122.4194" --time "2023-09-15T10:30" --timezone "America/Los_Angeles"
   ```
   or without time:
   ```bash
-  python3 manage.py list_food_trucks "37.7749" "-122.4194"
+  python manage.py list_food_trucks "37.7749" "-122.4194"
   ```
 - **Rich Library**: Enhanced visualization with the `rich` library for colorful and formatted output.
 - **Output Details**: The command displays a table with columns for Applicant, Address, Food Items, Distance, and Duration for easy readability.
@@ -74,6 +74,54 @@ Welcome to the Food Trucks Locator project! This application is designed to help
 - When a request matches a previously cached one, the system returns the cached response, eliminating the need for redundant Google Maps requests.
 - You can configure the caching period in the `.env` file using the `CACHE_TIMEOUT` variable, which defines the duration in seconds for which cached responses are considered valid.
 - For simplicity, at this stage only HTTP requests get cached, but this can be implemented also for the CLI using persistent cache such as Redis, or through File-Based Caching, where we save or data locally in a static files.
+
+## Setup and Installation
+
+To set up and install the Food Trucks Locator project, follow these steps:
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/jalilbm/food-trucks-locator.git
+   cd food-trucks-locator
+   ```
+
+2. **Create a Virtual Environment** (Optional but recommended):
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
+
+3. **Install Dependencies**:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Configure Environment Variables**:
+
+   - Create a `.env` file in the project directory and configure any necessary environment variables, such as database settings and cache settings.
+
+5. **Run Migrations**:
+
+   ```bash
+   python manage.py migrate
+   ```
+
+6. **Start the Development Server**:
+
+   ```bash
+   python manage.py runserver
+   ```
+
+7. **Access the Application**:
+
+   - The Food Trucks Locator API should now be accessible at `http://localhost:8000`.
+
+8. **Run CLI Command**:
+
+   - You can use the CLI command for food truck listing as shown in the Features section.
 
 ## Project Context
 
