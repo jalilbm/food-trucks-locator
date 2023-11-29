@@ -13,7 +13,8 @@ class FoodTruckListView(APIView):
 
     def get(self, request):
         """
-        This returns the top closest trucks to a given location by lat, lon. And optionally opening times
+        Returns the top 5 closest trucks to a given `latitude` and `longitude` by walking time.
+        Optionally returning only opened trucks if `time` and `timezone` are provided
         """
         latitude = request.query_params.get("latitude")
         longitude = request.query_params.get("longitude")
