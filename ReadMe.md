@@ -73,7 +73,7 @@ Welcome to the Food Trucks Locator project! This application is designed to help
 - The caching system stores responses for specific requests based on parameters such as `latitude`, `longitude`, `user_time`, and `user_timezone`.
 - When a request matches a previously cached one, the system returns the cached response, eliminating the need for redundant Google Maps requests.
 - You can configure the caching period in the `.env` file using the `CACHE_TIMEOUT` variable, which defines the duration in seconds for which cached responses are considered valid.
-- For simplicity, at this stage only HTTP requests get cached, but this can be implemented also fot the CLI using persistent cache such as Redis, or through File-Based Caching, where we save or data locally in a static files.
+- For simplicity, at this stage only HTTP requests get cached, but this can be implemented also for the CLI using persistent cache such as Redis, or through File-Based Caching, where we save or data locally in a static files.
 
 ## Project Context
 
