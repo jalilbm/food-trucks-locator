@@ -130,3 +130,17 @@ You can use the CLI command for food truck listing as shown in the Features sect
 This application was developed as part of RAKT's "Out-of-the-Box" Engineering Challenge, showcasing creativity and real-world problem-solving skills. It's designed with production-oriented practices and documents all technical decisions and trade-offs made during development.
 
 The inclusion of the `.env` file and the separate handling of the `GOOGLE_MAPS_API_KEY` are decisions made to balance ease of setup with security considerations.
+
+## 📸 Application Demonstrations
+
+### Backend Response over HTTP
+
+This screenshot demonstrates the typical JSON response structure from the backend when queried over HTTP.
+
+![Backend HTTP Response](screenshots/screencapture-1.png)
+
+### Backend Response via Django Command
+
+Here's how the backend responds when queried using the Django command-line interface.
+
+![Backend Django Command Response](screenshots/screencapture-2.png)
