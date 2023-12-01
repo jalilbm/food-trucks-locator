@@ -6,6 +6,7 @@ from rest_framework import status
 from rest_framework.throttling import AnonRateThrottle
 from django.core.cache import cache
 from food_trucks_locator.settings import CACHE_TIMEOUT
+import traceback
 
 
 class FoodTruckListView(APIView):
@@ -93,5 +94,14 @@ class FoodTruckListView(APIView):
 
             # Construct and return the response
             return Response(response)
+        except KeyError as e:
+            if str(e) == "'duration'":
+                return Response(
+                    {
+                        "message": "Could not get walking distance from the specified location"
+                    },
+                    status=status.HTTP_400_BAD_REQUEST,
+                )
         except Exception as e:
-            return Response({"message": str(e)})
+            print(traceback.format_exc())
+            return Response({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)

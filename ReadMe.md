@@ -79,50 +79,54 @@ Welcome to the Food Trucks Locator project! This application is designed to help
 
 To set up and install the Food Trucks Locator project, follow these steps:
 
-1. **Clone the Repository**:
+### Clone the Repository:
 
-   ```bash
-   git clone https://github.com/jalilbm/food-trucks-locator.git
-   cd food-trucks-locator
-   ```
+bash
 
-2. **Create a Virtual Environment** (Optional but recommended):
+```bash
+git clone https://github.com/jalilbm/food-trucks-locator.git
+cd food-trucks-locator
+```
 
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-   ```
+### Create a Virtual Environment (Optional but recommended):
 
-3. **Install Dependencies**:
+bash
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+```
 
-4. **Configure Environment Variables**:
+### Install Dependencies:
 
-   - Create a `.env` file in the project directory and configure any necessary environment variables, such as database settings and cache settings.
+`pip install -r requirements.txt`
 
-5. **Run Migrations**:
+### Configure Environment Variables:
 
-   ```bash
-   python manage.py migrate
-   ```
+- A `.env` file is included in the project directory for easier setup and configuration.
+- **Important**: The `GOOGLE_MAPS_API_KEY` is required for Google Maps integration but is not included in the `.env` file for security reasons.
+- You will receive the `GOOGLE_MAPS_API_KEY` via email. Please paste it into the `.env` file in the appropriate variable field.
 
-6. **Start the Development Server**:
+### Run Migrations:
 
-   ```bash
-   python manage.py runserver
-   ```
+`python manage.py migrate`
 
-7. **Access the Application**:
+### Start the Development Server:
 
-   - The Food Trucks Locator API should now be accessible at `http://localhost:8000`.
+`python manage.py runserver`
 
-8. **Run CLI Command**:
+### Access the Application:
 
-   - You can use the CLI command for food truck listing as shown in the Features section.
+The Food Trucks Locator API should now be accessible at [http://localhost:8000](http://localhost:8000).
+
+### Run CLI Command:
+
+You can use the CLI command for food truck listing as shown in the Features section.
+
+---
 
 ## Project Context
 
 This application was developed as part of RAKT's "Out-of-the-Box" Engineering Challenge, showcasing creativity and real-world problem-solving skills. It's designed with production-oriented practices and documents all technical decisions and trade-offs made during development.
+
+The inclusion of the `.env` file and the separate handling of the `GOOGLE_MAPS_API_KEY` are decisions made to balance ease of setup with security considerations.
