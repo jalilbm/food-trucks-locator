@@ -115,7 +115,7 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
 As the `db.sqlite3` is provided this step can be skipped.
 
-To test populating the database with the `csv` food truck data using a custom Django command:
+You can test populating the database with the `csv` food truck data using a custom Django command:
 
 ```bash
 python manage.py load_food_trucks /absolute/path/to/food-truck-data.csv
