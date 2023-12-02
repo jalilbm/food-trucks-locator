@@ -13,7 +13,7 @@ Welcome to the Food Trucks Locator project! This application is designed to help
 - Food trucks without latitude and longitude are excluded as they cannot be localized.
 - Example usage:
   ```bash
-  python manage.py load_food_trucks /path/to/food-truck-data.csv
+  python manage.py load_food_trucks /absolute/path/to/food-truck-data.csv
   ```
 
 ### Working Hours Data
@@ -111,6 +111,16 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
 `python manage.py migrate`
 
+### Populate the Database:
+
+Before starting the server, populate the database with the food truck data using the custom Django command:
+
+```bash
+python manage.py load_food_trucks /absolute/path/to/food-truck-data.csv
+```
+
+This step is crucial for the application to function correctly, as it sets up the necessary data in your local database.
+
 ### Start the Development Server:
 
 `python manage.py runserver`
@@ -121,7 +131,7 @@ The Food Trucks Locator API should now be accessible at [http://localhost:8000](
 
 ### Run CLI Command:
 
-You can use the CLI command for food truck listing as shown in the Features section.
+You can use the CLI command for food truck listing as shown in the Features section as described [above](#cli-command-for-food-truck-listing).
 
 ---
 
