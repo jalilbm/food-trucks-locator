@@ -111,15 +111,15 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
 `python manage.py migrate`
 
-### Populate the Database:
+### Test populating the Database (Optional):
 
-Before starting the server, populate the database with the food truck data using the custom Django command:
+As the `db.sqlite3` is provided this step can be skipped.
+
+To test populating the database with the `csv` food truck data using a custom Django command:
 
 ```bash
 python manage.py load_food_trucks /absolute/path/to/food-truck-data.csv
 ```
-
-This step is crucial for the application to function correctly, as it sets up the necessary data in your local database.
 
 ### Start the Development Server:
 
