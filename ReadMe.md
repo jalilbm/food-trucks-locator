@@ -1,10 +1,10 @@
 # Food Trucks Locator Project
 
-## Frontend Application URL
+## 🚀 Live Demo
 
-**Access the Frontend Application Here:** [Food Trucks Locator](https://food-trucks-locator.netlify.app/)
+**Access the Frontend demo Here:** [Food Trucks Locator](https://food-trucks-locator.netlify.app/)
 
-## API Test Examples
+## 🚀 Live API Test Examples
 
 Test the API with these examples:
 
