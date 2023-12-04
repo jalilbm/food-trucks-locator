@@ -1,5 +1,18 @@
 # Food Trucks Locator Project
 
+## Frontend Application URL
+
+**Access the Frontend Application Here:** [Food Trucks Locator](https://food-trucks-locator.netlify.app/)
+
+## API Test Examples
+
+Test the API with these examples:
+
+- **Get Nearby Food Trucks**:  
+   [https://food-trucks-locator-backend-46ce8296586b.herokuapp.com/api/food-trucks/?latitude=37.7749&longitude=-122.4194](https://food-trucks-locator-backend-46ce8296586b.herokuapp.com/api/food-trucks/?latitude=37.7749&longitude=-122.4194)
+- **Get Food Trucks Open at Specific Time**:  
+   [https://food-trucks-locator-backend-46ce8296586b.herokuapp.com/api/food-trucks/?latitude=37.7749&longitude=-122.4194&time=2023-09-15T10:30&timezone=America/Los_Angeles](https://food-trucks-locator-backend-46ce8296586b.herokuapp.com/api/food-trucks/?latitude=37.7749&longitude=-122.4194&time=2023-09-15T10:30&timezone=America/Los_Angeles)
+
 ## Introduction
 
 Welcome to the Food Trucks Locator project! This application is designed to help users in San Francisco find food trucks based on their location, with an added feature to show only those that are open at a specified time.
