@@ -1,1 +1,1 @@
-web: gunicorn your_project_name.wsgi --log-file -
+web: gunicorn food_trucks_locator.wsgi --log-file -
